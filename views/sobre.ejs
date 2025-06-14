@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sobre.css">
+</head>
+<body>
+    <%- include ('partials/header') %>
+    <section id="sobre">
+        <div>
+            <div>
+                <h2><%= titulo %></h2>
+                <hr>
+            </div>
+            <div class="sobre-conteudo">
+                <div class="sobre-texto">
+                    <p>Olá! Meu nome é Ana Gaspar e sou Desenvolvedora de Software em formação. Atualmente, curso Desenvolvimento
+                        de Software Multiplataforma na FATEC São José dos Campos.
+                        <br>Sou apaixonada por tecnologia e prezo por estar sempre buscando aprender novas ferramentas e boas práticas de desenvolvimento.
+                        Aqui você encontrará desde projetos acadêmicos até iniciativas pessoais que refletem meu progresso técnico e minha dedicação contínua.
+                        <br>Sinta-se à vontade para explorar meus trabalhos, acompanhar minha evolução e, caso queira, entrar em contato para possíveis colaborações!
+                    </p>
+                    <p><strong>Quer saber mais sobre minha jornada profissional? Acesse o meu currículo! ↓</strong></p>
+                    <a href="/CurriculoPT.pdf" target="_blank">
+                        <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/download--v1.png" alt="currículo"/>
+                        Resumo
+                    </a>
+                </div>
+                <div class="sobre-foto">
+                    <img src="/foto-sobre.jpeg" alt="minha foto">
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
