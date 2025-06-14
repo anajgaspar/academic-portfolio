@@ -60,6 +60,15 @@ body {
     transform: scale(1.1);
 }
 
+i {
+    font-size: 50px;
+    transition: scale(1.1);
+}
+
+i:hover {
+    transform: scale(1.1);
+}
+
 #projetos {
     min-height: 87vh;
     padding: 5rem 10%;
