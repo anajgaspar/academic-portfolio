@@ -73,6 +73,10 @@ a img {
 }
 
 @media (max-width: 768px) {
+    #sobre {
+        padding: 0 10%;
+    }
+
     #sobre h2 {
         font-size: 2.2rem;
     }

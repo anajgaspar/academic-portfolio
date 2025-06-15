@@ -84,6 +84,10 @@ form button {
 }
 
 @media (max-width: 768px) {
+    #contato {
+        padding: 0 10%;
+    }
+
     form input, textarea {
         max-width: 100%;
     }

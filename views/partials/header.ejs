@@ -13,15 +13,29 @@
 </head>
 <body>
     <header>
-        <a href="/">
-          <span>&lt;anajgaspar/&gt;</span>
-        </a>
+        <div id="navIcons">
+          <a href="/">
+            <span>&lt;anajgaspar/&gt;</span>
+          </a>
+          <div class="menu-toggle" id="menuToggle">
+            <i class="fas fa-bars"></i>
+          </div>
+        </div>
         <nav id="navMenu">
           <a href="/">Início</a>
           <a href="/sobre">Sobre</a>
           <a href="/habilidades">Projetos</a>
           <a href="/contato">Contato</a>
         </nav>
-      </header>       
+      </header>
+      <script>
+        const toggle = document.getElementById('menuToggle');
+        const navMenu = document.getElementById('navMenu');
+
+        toggle.addEventListener('click', () => {
+          navMenu.classList.toggle('show');
+          toggle.classList.toggle('open');
+        });
+      </script>    
 </body>
 </html>

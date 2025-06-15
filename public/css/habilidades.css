@@ -60,12 +60,13 @@ body {
     transform: scale(1.1);
 }
 
-i {
+#tecnologia {
+    fill: #ffffff;
     font-size: 50px;
-    transition: scale(1.1);
+    transition: transform 0.3s ease;
 }
 
-i:hover {
+#tecnologia:hover {
     transform: scale(1.1);
 }
 
@@ -220,6 +221,10 @@ i:hover {
 }
 
 @media (max-width: 768px) {
+    #habilidades {
+        padding: 0 10%;
+    }
+
     #habilidades h2 {
         font-size: 2.2rem;
     }
