@@ -55,6 +55,7 @@ body {
 @media (max-width: 768px) {
     #home {
         padding: 0 10%;
+        min-height: 35vh;
     }
 
     #home h2 {
@@ -68,9 +69,9 @@ body {
 
 @media (max-width: 480px) {
     #home {
-        min-height: 67vh;
+        padding: 0 10%;
     }
-
+    
     #home h2 {
         font-size: 1.8rem;
     }
