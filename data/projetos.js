@@ -57,4 +57,4 @@ const projetos = [
     }
 ];
 
-module.exports = projetos;
+export default projetos;

@@ -150,4 +150,4 @@ const competencias = [
     },
 ]
 
-module.exports = competencias;
+export default competencias;
