@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #2c0044;
+    color: #ffffff;
+    padding-top: 80px;
+}
+
+#projetos {
+    min-height: 87vh;
+    padding: 0 10%;
+    padding-bottom: 5rem;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.voltar {
+    background-image: linear-gradient(to left, #FF67B6, #9E56C6, #3E46D7);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    color: #0d0d0d;
+    text-decoration: none;
+}
+
+.projeto-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+}
+
+.projeto-imagem {
+    align-self: center;
+    width: 700px;
+    height: auto;
+}
+
+.descricao {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.titulo {
+    font-weight: bold;
+}
+
+.contribuicoes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tecnologias {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.tecnologia {
+    background-image: linear-gradient(to left, #FF67B6, #9E56C6, #3E46D7);
+    background-size: 100%;
+    background-clip: text;
+    border: #9E56C6 1px solid;
+    border-radius: 10%;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    padding: 5px;
+    margin: 1px;
+    display: inline-block;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skill {
+    margin-left: 25px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.links button {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    gap: 4px;
+    padding: 8px;
+    background-color: transparent;
+    border: #9E56C6 1px solid;
+    border-radius: 5px;
+}
+
+.links button a {
+    background-image: linear-gradient(to left, #FF67B6, #9E56C6, #3E46D7);
+    background-size: 100%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+    color: #0d0d0d;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .projeto-header {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+    }
+
+    .projeto-imagem {
+        width: 350px;
+        height: auto;
+    }
+}

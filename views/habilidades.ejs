@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habilidades & Certificações</title>
+    <title>Competências</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="css/habilidades.css">
 </head>
+
 <body>
     <%- include ('partials/header') %>
         <section id="habilidades">
@@ -19,132 +23,26 @@
                 </h2>
                 <hr>
             </div>
-            <div class="habilidades-texto">
-                <p>Sobre soft skills: sou resiliente, adaptável e proativa, com facilidade para aprender e colaborar em
-                    equipe. Valorizo uma comunicação clara e estou sempre em busca de crescimento pessoal e
-                    profissional.</p>
-            </div>
-            <div class="tecnologias">
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="html5" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="css3" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="javascript" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="typescript" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="react" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" alt="sass" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="tailwindcss" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" alt="bootstrap" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="python" />
-                <i class="devicon-flask-original-wordmark" id="tecnologia"></i>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" />
-                <i class="devicon-express-original" id="tecnologia"></i>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" alt="mysql" />
-                <i class="devicon-prisma-original-wordmark" id="tecnologia"></i>
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="aws" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original-wordmark.svg" alt="docker" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original-wordmark.svg" alt="git" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg" alt="jira" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" alt="figma" />
-            </div>
-            <hr>
-            <div class="habilidades-texto">
-                <p><strong>Abaixo estão alguns dos meus projetos, clique neles para saber mais:</strong></p>
-            </div>
-            <div class="projetos-cards">
-                <% projetos.forEach(projeto=> { %>
-                    <div class="card" onclick="abrirModal(<%= projeto.id %>)">
-                        <img src="/<%= projeto.imagem %>">
-                        <h4>
-                            <%= projeto.titulo %>
-                        </h4>
+            <br>
+            <div class="competencias-container">
+                <% competencias.forEach(cat=> { %>
+                    <div class="card-competencia">
+                        <h3>
+                            <%= cat.titulo %>
+                        </h3>
+                        <div class="tecnologias">
+                            <% cat.tecnologias.forEach(tec=> { %>
+                                <div class="tecnologia">
+                                    <img src="<%= tec.icone %>" alt="<%= tec.nome %>">
+                                    <p class="tec-nome"><%= tec.nome %></p>
+                                    <p class="tec-nivel"><%= tec.nivel %></p>
+                                </div>
+                            <% }) %>
+                        </div>
                     </div>
-                    <% }) %>
-            </div>
-            <div id="modal" class="modal hidden">
-                <div class="modal-content">
-                    <button onclick="fecharModal()">&times;</button>
-                    <h3 id="modalTitulo"></h3>
-                    <hr>
-                    <p id="modalDescricao"></p>
-                    <p><strong>Tecnologias utilizadas:</strong> <span id="modalTecnologias"></span></p>
-                    <div id="modalLinks" class="links"></div>
-                </div>
-            </div>
+                <% }) %>
             </div>
         </section>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-        <script>
-            const projetos = <%- JSON.stringify(projetos) %>;
-
-            const modal = document.getElementById('modal');
-
-            function abrirModal(id) {
-            const projeto = projetos.find(p => p.id === Number(id));
-
-            document.getElementById('modalTitulo').textContent = projeto.titulo;
-            document.getElementById('modalDescricao').textContent = projeto.descricao;
-
-            const tecnologiasDiv = document.getElementById('modalTecnologias');
-            tecnologiasDiv.innerHTML = '';
-            if (projeto.tecnologias) {
-                projeto.tecnologias.forEach(tec => {
-                const span = document.createElement('span');
-                span.textContent = tec;
-                tecnologiasDiv.appendChild(span);
-                });
-            }
-
-            const linksDiv = document.getElementById('modalLinks');
-            linksDiv.innerHTML = '';
-            if (projeto.github) {
-                const githubLink = document.createElement('a');
-                githubLink.href = projeto.github;
-                githubLink.target = '_blank';
-                githubLink.className = 'bg-gray-800 text-white rounded-md hover:bg-gray-700';
-                githubLink.textContent = 'GitHub';
-                githubLink.style.gap = '7px';
-                const githubIcon = document.createElement('img');
-                githubIcon.src = 'https://img.icons8.com/?size=100&id=106564&format=png&color=FFFFFF';
-                githubIcon.style.width = '20px';
-                githubLink.appendChild(githubIcon);
-                linksDiv.appendChild(githubLink);
-            }
-            if (projeto.deploy) {
-                const deployLink = document.createElement('a');
-                deployLink.href = projeto.deploy;
-                deployLink.target = '_blank';
-                deployLink.className = 'bg-gray-800 text-white rounded-md hover:bg-gray-700';
-                deployLink.textContent = 'Deploy';
-                deployLink.style.gap = '7px';
-                const externalIcon = document.createElement('img');
-                externalIcon.src = 'https://img.icons8.com/?size=100&id=60995&format=png&color=FFFFFF';
-                externalIcon.style.width = '20px';
-                deployLink.appendChild(externalIcon);
-                linksDiv.appendChild(deployLink);
-            }
-
-            if (projeto.visitar) {
-                const visitarLink = document.createElement('a');
-                visitarLink.href = projeto.visitar;
-                visitarLink.target = '_blank';
-                visitarLink.className = 'bg-purple-900 text-white px-4 py-2 rounded-md ml-2 hover:bg-purple-700';
-                visitarLink.innerHTML = '<i class="fas fa-external-link-alt"></i> Visitar';
-                linksDiv.appendChild(visitarLink);
-            }
-
-            modal.classList.add('show');
-            }
-
-            function fecharModal() {
-            modal.classList.remove('show');
-            }
-
-            window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                fecharModal();
-            }
-            });
-        </script>
 </body>
 
 </html>

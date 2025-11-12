@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "api/**/*.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/", "dest": "/api/index.js" },
+    { "src": "/sobre", "dest": "/api/sobre.js" },
+    { "src": "/habilidades", "dest": "/api/habilidades.js" },
+    { "src": "/projetos", "dest": "/api/projetos.js" },
+    { "src": "/projetos/(.*)", "dest": "/api/projetos/$1.js" },
+    { "src": "/contato", "dest": "/api/contato.js" }
+  ]
+}
