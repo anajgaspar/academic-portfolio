@@ -2,4 +2,4 @@
 
 > OBS: Este portfólio está em constante evolução à medida que desenvolvo novos projetos e habilidades.
 
-🔗 [Deploy](https://academic-portfolio.up.railway.app)
+🔗 [Deploy](https://ana-gaspar.vercel.app)
