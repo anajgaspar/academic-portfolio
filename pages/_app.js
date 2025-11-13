@@ -5,7 +5,6 @@ import '../public/css/projetos.css';
 import '../public/css/projetos-detalhes.css';
 import '../public/css/sobre.css';
 import '../public/css/habilidades.css';
-import '../public/css/contato.css';
 
 export default function MyApp({ Component, pageProps }) {
   return (

@@ -55,7 +55,7 @@ body {
 @media (max-width: 768px) {
     #home {
         padding: 0 10%;
-        min-height: 35vh;
+        min-height: calc(100vh - 80px);
     }
 
     #home h2 {
@@ -64,27 +64,5 @@ body {
 
     #home h4 {
         font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    #home {
-        padding: 0 10%;
-    }
-    
-    #home h2 {
-        font-size: 1.8rem;
-    }
-
-    #home h4 {
-        font-size: 1rem;
-    }
-
-    #home a {
-        font-size: 1.3rem;
-    }
-
-    #home div {
-        gap: 1rem;
     }
 }
