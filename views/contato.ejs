@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/contato.css">
+    <%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/contato.css">
+        <% if (typeof pageCss !== 'undefined') { %>
+        <style>
+            <%= pageCss %>
+        </style>
+        <% } %>
 </head>
 
 <body>
-    <%- include ('partials/header') %>
+    <%- include('partials/header') %>
         <div id="contato">
             <div>
                 <h2>
@@ -28,7 +27,7 @@
                 <p><strong>Sinta-se a vontade para me enviar uma mensagem!</strong></p>
             </div>
             <div class="contato-form">
-                <form action="/enviar-email" method="post">
+                <form action="/api/contato" method="post">
                     <input type="text" name="nome" placeholder="Seu nome" required>
                     <input type="email" name="email" placeholder="Seu e-mail" required>
                     <textarea name="msg" placeholder="Digite sua mensagem" required></textarea>
@@ -36,10 +35,14 @@
                     <% if (typeof enviado !=='undefined' && enviado) { %>
                         <p style="margin-top: 5px; padding: 3px; color: green; border: dotted green;">Mensagem enviada
                             com sucesso! :)</p>
-                        <% } else if (typeof erro !=='undefined' && erro) { %>
+                    <% } else if (typeof erro !=='undefined' && erro) { %>
+                        <% if (erro === 'env') { %>
+                            <p style="margin-top: 5px; padding: 3px; color: red; border: dotted red;">O envio não pôde ser realizado porque as credenciais de e-mail não estão configuradas no ambiente. Configure as variáveis <code>email_user</code> e <code>email_pass</code> e tente novamente.</p>
+                        <% } else { %>
                             <p style="margin-top: 5px; padding: 3px; color: red; border: dotted red;">Ocorreu um erro ao
-                                enviar sua mensagem. Tente novamente.</p>
-                            <% } %>
+                                enviar sua mensagem. Tente novamente mais tarde.</p>
+                        <% } %>
+                    <% } %>
                 </form>
             </div>
             <div class="contato-links">

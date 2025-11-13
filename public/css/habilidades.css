@@ -1,9 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -65,14 +65,22 @@ body {
   color: #6b21a8;
 }
 
-.tecnologias {
+.card-competencia .tecnologias {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.tecnologia {
+.card-competencia .tecnologias {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-competencia .tecnologia {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -80,24 +88,24 @@ body {
   text-align: center;
 }
 
-.tecnologia img {
+.card-competencia .tecnologia img {
   width: 35px;
   height: auto;
   transition: transform 0.3s ease;
 }
 
-.tecnologia img:hover {
+.card-competencia .tecnologia img:hover {
   transform: scale(1.1);
 }
 
-.tec-nome {
+.card-competencia .tec-nome {
   margin: 8px 0 2px;
   font-weight: 600;
   font-size: 1rem;
   color: #4b0082;
 }
 
-.tec-nivel {
+.card-competencia .tec-nivel {
   font-size: 0.85rem;
   color: #6b7280;
 }

@@ -35,20 +35,20 @@ body {
     margin-bottom: 1rem;
 }
 
-.sobre-conteudo {
+#sobre .sobre-conteudo {
     display: flex;
     flex-direction: row;
     gap: 20px;
 }
 
-.sobre-texto {
+#sobre .sobre-texto {
     flex: 1;
     font-size: 1.15rem;
     line-height: 1.7;
     color: #d9d9d9;
 }
 
-.sobre-texto a {
+#sobre .sobre-texto a {
     display: inline-flex;
     align-items: center;
     gap: 0.3rem;
@@ -61,12 +61,12 @@ body {
     text-decoration: none;
 }
 
-a img {
+#sobre a img {
     width: 17px;
     height: auto;
 }
 
-.sobre-foto img {
+#sobre .sobre-foto img {
     width: 300px;
     height: auto;
     border-radius: 1rem;
@@ -81,15 +81,15 @@ a img {
         font-size: 2.2rem;
     }
 
-    .sobre-conteudo {
+    #sobre .sobre-conteudo {
         flex-direction: column;
     }
 
-    .sobre-texto {
+    #sobre .sobre-texto {
         font-size: 0.95rem;
     }
 
-    .sobre-foto img {
+    #sobre .sobre-foto img {
         width: 100%;
     }
 
