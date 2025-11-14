@@ -12,7 +12,7 @@ const projetos = [
         hardSkills: ["Criação de wireframes", "HTML e CSS", "JavaScript"],
         tecnologias: ["HTML5", "CSS3", "JavaScript", "Flask", "MySQL"],
         github: "https://github.com/Draco-Imperium/API_FATEC1",
-        deploy: ""
+        youtube: "https://www.youtube.com/watch?v=NQjO5y1g220"
     },
     {
         id: 2,
@@ -27,7 +27,7 @@ const projetos = [
         hardSkills: ["HTML e CSS", "Noções de UX design", "Visualização de dados"],
         tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "Sass", "TypeScript", "NodeJS"],
         github: "https://github.com/GeneSys-fatec/API-2DSM",
-        deploy: ""
+        youtube: "https://www.youtube.com/watch?v=0kPp-YthV4Y"
     },
     {
         id: 3,
@@ -42,7 +42,7 @@ const projetos = [
         hardSkills: ["Product Ownership", "Criação de wireframes", "Gestão de backlog", "Metodologias Ágeis"],
         tecnologias: ["HTML5", "CSS3", "JavaScript", "React", "TailwindCSS", "TypeScript", "Java", "Sprint Boot", "MongoDB", "AWS"],
         github: "https://github.com/GeneSys-fatec/API-3DSM",
-        deploy: ""
+        youtube: ""
     },
     {
         id: 4,

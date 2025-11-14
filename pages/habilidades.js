@@ -1,7 +1,8 @@
 import ejs from 'ejs';
 import fs from 'fs';
 import path from 'path';
-import competencias from '../data/competencias.js';
+import softSkills from '../data/softSkills.js';
+import hardSkills from '../data/hardSkills.js';
 
 export default function Habilidades({ html }) {
   return <div dangerouslySetInnerHTML={{ __html: html }} />;
@@ -32,7 +33,8 @@ export async function getServerSideProps(ctx) {
 
   const html = ejs.render(template, {
     titulo: 'Competências',
-    competencias,
+    hardSkills,
+    softSkills,
     headerCss,
     pageCss,
     embed

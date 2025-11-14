@@ -24,10 +24,20 @@
                 </h2>
                 <hr>
             </div>
-            <br>
-            <div class="competencias-container">
-                <% competencias.forEach(cat=> { %>
-                    <div class="card-competencia">
+            <h3 style="font-size: 30px">Soft-skills</h3>
+            <div class="softSkills">
+                <% softSkills.forEach(cat=> { %>
+                    <div class="card-softSkills">
+                        <p>
+                            <%= cat.titulo %>
+                        </p>
+                    </div>
+                <% }) %>
+            </div>
+            <h3 style="font-size: 30px">Hard-skills</h3>
+            <div class="hardSkills">
+                <% hardSkills.forEach(cat=> { %>
+                    <div class="card-hardSkills">
                         <h3>
                             <%= cat.titulo %>
                         </h3>

@@ -1,4 +1,4 @@
-const competencias = [
+const hardSkills = [
     {
         id: 1,
         titulo: "Front-end",
@@ -150,4 +150,4 @@ const competencias = [
     },
 ]
 
-export default competencias;
+export default hardSkills;

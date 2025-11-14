@@ -36,7 +36,7 @@
       </p>
     </div>
     <div class="contribuicoes">
-      <h2>Minhas Contribuições</h2>
+      <h3 style="font-size: 30px">Minhas Contribuições</h3>
       <p><span class="titulo">Papel: </span>
         <%= projeto.papel %>
       </p>
@@ -45,7 +45,7 @@
       </p>
     </div>
     <div class="tecnologias">
-      <h2>Tecnologias utilizadas</h2>
+      <h3 style="font-size: 30px">Tecnologias utilizadas</h3>
       <ul>
         <% projeto.tecnologias.forEach(tec=> { %>
           <li class="tecnologia">
@@ -55,7 +55,7 @@
       </ul>
     </div>
     <div class="skills">
-      <h2>Competências adquiridas</h2>
+      <h3 style="font-size: 30px">Competências adquiridas</h3>
       <h4>Soft-skills adquiridas:</h4>
       <ul>
         <% if (projeto.softSkills) { %>
@@ -78,17 +78,19 @@
       </ul>
     </div>
     <div class="links">
-      <h2>Links</h2>
-      <% if (projeto.github) { %>
-        <button>
-          <a href="<%= projeto.github %>" target="_blank">Ver no GitHub</a>
-        </button>
+      <h3 style="font-size: 30px">Links</h3>
+      <div>
+        <% if (projeto.github) { %>
+          <button>
+            <a href="<%= projeto.github %>" target="_blank">Ver no GitHub</a>
+          </button>
         <% } %>
-          <% if (projeto.deploy) { %>
-            <button>
-              <a href="<%= projeto.deploy %>" target="_blank">Acessar deploy</a>
-            </button>
-            <% } %>
+        <% if (projeto.youtube) { %>
+          <button>
+            <a href="<%= projeto.youtube %>" target="_blank">Ver no Youtube</a>
+          </button>
+        <% } %>
+      </div>
     </div>
   </section>
 </body>

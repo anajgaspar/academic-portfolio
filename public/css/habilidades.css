@@ -35,7 +35,7 @@ body {
     margin-bottom: -2rem;
 }
 
-.competencias-container {
+.hardSkills {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -43,7 +43,7 @@ body {
   gap: 30px;
 }
 
-.card-competencia {
+.card-hardSkills {
   background-color: #fff;
   color: #333;
   width: 350px;
@@ -53,26 +53,26 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-competencia:hover {
+.card-hardSkills:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
 }
 
-.card-competencia h3 {
+.hardSkills h3 {
   text-align: center;
   margin-bottom: 20px;
   font-size: 1.5rem;
   color: #6b21a8;
 }
 
-.card-competencia .tecnologias {
+.hardSkills .tecnologias {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
 }
 
-.card-competencia .tecnologias {
+.hardSkills .tecnologias {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -80,7 +80,7 @@ body {
   gap: 20px;
 }
 
-.card-competencia .tecnologia {
+.hardSkills .tecnologia {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,26 +88,49 @@ body {
   text-align: center;
 }
 
-.card-competencia .tecnologia img {
+.hardSkills .tecnologia img {
   width: 35px;
   height: auto;
   transition: transform 0.3s ease;
 }
 
-.card-competencia .tecnologia img:hover {
+.hardSkills .tecnologia img:hover {
   transform: scale(1.1);
 }
 
-.card-competencia .tec-nome {
+.hardSkills .tec-nome {
   margin: 8px 0 2px;
   font-weight: 600;
   font-size: 1rem;
   color: #4b0082;
 }
 
-.card-competencia .tec-nivel {
+.hardSkills .tec-nivel {
   font-size: 0.85rem;
   color: #6b7280;
+}
+
+.softSkills {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-softSkills:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-softSkills {
+  background-color: #fff;
+  color: #6b21a8;
+  border-radius: 16px;
+  padding: 10px 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
@@ -115,8 +138,12 @@ body {
         padding: 0 10%;
     }
 
-    .card-competencia {
+    .hardSkills {
         padding: 25px 15px;
+    }
+
+    .softSkills {
+      padding: 10px 0px;
     }
 
     .tecnologia {
