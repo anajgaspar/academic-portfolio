@@ -71,7 +71,7 @@
         <ul>
             <% projeto.softSkills.forEach(skill=> { %>
               <li class="skill">
-                <%= skill %>
+                <span class="titulo"><%= skill.titulo %>: </span><%= skill.descricao %>
               </li>
             <% }) %>
         </ul>
@@ -81,7 +81,7 @@
         <% if (projeto.hardSkills) { %>
           <% projeto.hardSkills.forEach(skill=> { %>
             <li class="skill">
-              <%= skill %>
+              <span class="titulo"><%= skill.titulo %>: </span><%= skill.descricao %>
             </li>
           <% }) %>
         <% } %>
