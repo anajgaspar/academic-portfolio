@@ -19,30 +19,40 @@
   <section id="projetos">
     <a href="/projetos" class="voltar">← Voltar aos projetos</a>
     <div class="projeto-header">
-      <h2>
-        <%= projeto.titulo %>
-      </h2><span>-</span>
-      <p>
-        <%= projeto.semestre %>
-      </p>
+        <h2>
+          <%= projeto.titulo %>   
+        <% if (projeto.semestre) { %>
+        </h2><span>-</span>
+          <p>
+            <%= projeto.semestre %>
+          </p>
+        <% } %>
     </div>
   <img src="<%= embed(projeto.imagem) %>" alt="<%= projeto.titulo %>" class="projeto-imagem">
     <div class="descricao">
-      <p><span class="titulo">Problema: </span>
-        <%= projeto.problema %>
-      </p>
-      <p><span class="titulo">Solução: </span>
-        <%= projeto.solucao %>
-      </p>
+      <% if (projeto.problema) { %>
+        <p><span class="titulo">Problema: </span>
+          <%= projeto.problema %>
+        </p>
+      <% } %>
+      <% if (projeto.solucao) { %>
+        <p><span class="titulo">Solução: </span>
+          <%= projeto.solucao %>
+        </p>
+      <% } %>
     </div>
     <div class="contribuicoes">
       <h3 style="font-size: 30px">Minhas Contribuições</h3>
-      <p><span class="titulo">Papel: </span>
-        <%= projeto.papel %>
-      </p>
-      <p><span class="titulo">Ações: </span>
-        <%= projeto.contribuicao %>
-      </p>
+      <% if (projeto.papel) { %>
+        <p><span class="titulo">Papel: </span>
+          <%= projeto.papel %>
+        </p>
+      <% } %>
+      <% if (projeto.contribuicao) { %>
+        <p><span class="titulo">Ações: </span>
+          <%= projeto.contribuicao %>
+        </p>
+      <% } %>
     </div>
     <div class="tecnologias">
       <h3 style="font-size: 30px">Tecnologias utilizadas</h3>
@@ -56,16 +66,16 @@
     </div>
     <div class="skills">
       <h3 style="font-size: 30px">Competências adquiridas</h3>
-      <h4>Soft-skills adquiridas:</h4>
-      <ul>
-        <% if (projeto.softSkills) { %>
-          <% projeto.softSkills.forEach(skill=> { %>
-            <li class="skill">
-              <%= skill %>
-            </li>
-          <% }) %>
-        <% } %>
-      </ul>
+      <% if (projeto.softSkills) { %>
+        <h4>Soft-skills adquiridas:</h4>
+        <ul>
+            <% projeto.softSkills.forEach(skill=> { %>
+              <li class="skill">
+                <%= skill %>
+              </li>
+            <% }) %>
+        </ul>
+      <% } %>
       <h4>Hard-skills adquiridas:</h4>
       <ul>
         <% if (projeto.hardSkills) { %>
